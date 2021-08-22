@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(230, 230, 230, 0.392);
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    margin: 0px 0px 13px 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+.logo {
+    position: relative;
+    top: 29px;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.nav-menu {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    max-width: 920px;
+    background-color: rgb(0 157 255 / 7%);
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.side-content {
+    margin-top: 68px;
+    width: 40%;
+    background-color: #fff;
+    float: left;
+    padding: 3%;
+    border-radius: 6px;
+    margin-left: 3%;
+    margin-bottom: 30%;
+}
+
+.main-content {
+    position: relative;
+    padding: 3%;
+    margin-top: 68px;
+    width: 50%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 6px;
+    margin-right: 3%;
+    float: right;
+    margin-bottom: 30%;
+}
+
+.main-content label:first-child {
+    margin-top: 0;
+}
+
+.main-content label {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.main-content input {
+    line-height: 18px;
+    padding-left: 9px;
+    height: 20px;
+    width: 72%;
+    height: 36px;
+    border-radius: 6px;
+    border: 0.1px solid #1e8fff97;
+    font-size: 15px;
+}
+
+.json-placeholder-id, .placeholder-id {
+    display: none;
+}
+
+.main-content input:focus {
+    outline: none;
+}
+
+.main-content input[type=submit] {
+    margin-top: 13px;
+    background: #1e90ff;
+    color: #ffffff;
+    border-radius: 3px;
+    border: solid 0.1px #1e90ff;
+    cursor: pointer;
+}
+
+.main-content input[type=submit]:hover {
+    background: #067cdc;
+}
+
+.button {
+    margin-top: 13px;
+    margin-bottom: 14px;
+    width: 112px;
+    height: 32px;
+    background: #1e90ff;
+    color: #ffffff;
+    border-radius: 3px;
+    border: solid 0.1px #1e90ff;
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #067cdc;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+    }
+    .side-content, .main-content {
+        float: none;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-content {
+        margin-bottom: 0%;
+    }
+    .main-content {
+        margin-top: 38px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .main-content input {
+        width: 100%;
+    }         
+}

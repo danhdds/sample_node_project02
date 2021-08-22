@@ -1,0 +1,64 @@
+ul {
+    list-style-position: inside;
+}
+
+.edit {
+    float: left;
+    background-color: #FFA500;
+    border: solid 0.1px #E59400;
+    padding-left: 36px;
+}
+
+.edit a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.edit:hover {
+    background-color: #E69500;
+}
+
+.debt-id {
+    display: none;
+}
+
+.debt-details {
+    display: none;
+}
+
+.button-display {
+    margin-top: 13px;
+    margin-bottom: 14px;
+    width: 112px;
+    height: 32px;
+    background: #1e90ff;
+    color: #ffffff;
+    border-radius: 3px;
+    border: solid 0.1px #1e90ff;
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.button-display:hover {
+    background: #067cdc;
+}
+
+.delete {
+    float: left;
+    background-color: #FF1B1B;
+    border: solid 0.1px #E51818;
+    margin-left: 20px;
+    padding-left: 33px;
+}
+
+.delete a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.delete:hover {
+    background-color: #CE1515;
+}

@@ -1,0 +1,49 @@
+.user span {
+    font-size: 18px;
+}
+
+.view-debt-list {
+    text-decoration: none;
+}
+
+.all-users {
+    visibility: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #f7f4f4;
+    position: absolute;
+    width: 63.2%;
+    max-height: 287px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 0rem;
+    border-radius: 0px 0px 4px 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+.all-users li:last-child {
+    border-bottom: 0px;
+}
+
+.all-users li {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #757575;
+    display: block;
+    cursor: pointer;
+}
+
+.all-users li:hover:not(.header) {
+    background-color: #eee;
+}
+
+@media only screen and (max-width: 460px) {  
+    .all-users {
+        width: 92.4%;
+    }      
+}

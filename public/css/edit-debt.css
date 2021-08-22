@@ -1,0 +1,6 @@
+.main-content {
+    float: none;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
