@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/list-user-debt.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/main.js"></script>
+    <title>Code7 - List user debts</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <%- include('./partials/header.html'); -%>
+
+            <main>
+
+                <div class="side-content">
+                    <h3><% if(debtList.length > 0){ %><%=debtList[0][0].name %><%}%> %></h3>
+                    <ul>
+
+                        <% for(let i=0; i < Object.keys(debtList[0]).length; i++) { %>
+                                
+                                <li>
+                                    Divida <%= i; %>: <%= debtList[0][i].reason;%>
+                                    <div class="button-display <%= debtList[0][i].id%>">
+                                        Ver detalhes
+                                        <div class="debt-id <%= debtList[0][i].id%>"><%= debtList[0][i].id%></div>
+                                    </div>
+                                </li>
+
+                        <% } %>
+
+                    </ul>
+                </div>
+
+                <div class="main-content">
+                    <h3>Divida</h3>
+                    
+                        <% for(let i=0; i < Object.keys(debtList[0]).length; i++) { %>
+                            
+                            <div class="debt-details <%= debtList[0][i].id%>" id="debt-details <%= debtList[0][i].id%>">
+                                Divida: <%= i; %><br>
+                                Motivo: <%= debtList[0][i].reason; %><br>
+                                Valor: <%= debtList[0][i].value.valueOf(); %><br>
+                                Data: <%= debtList[0][i].date; %><br>
+                                <div class="button edit"><a href="/edit/<%= debtList[0][i].id %>">Editar</a></div>
+                                <div class="button delete"><a href="/delete/<%= debtList[0][i].json_placeholder_user_id %>">Deletar</a></div>
+                                <div class="clear"></div>
+                            </div>
+
+                        <% } %>
+                    
+                </div>
+                <div class="clear"></div>
+
+            </main>
+
+    </div><!-- end container -->
+
+</body>
+
+</html>

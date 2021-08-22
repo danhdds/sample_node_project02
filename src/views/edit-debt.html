@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/edit-debt.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/main.js"></script>
+    <title>Code7 - Edit debt</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <%- include('./partials/header.html'); -%>
+
+        <main>
+
+            <div class="main-content">
+                <h3>Inserir nova dívida</h3>
+                <form method="post" autocomplete="off">
+                    <input class="json-placeholder-id" type="value" name="jsonplaceholderid" value="<%= debt[0][0].json_placeholder_user_id %>" />
+        
+                    <label for="client">Cliente</label><br>
+                    <input type="text" name="client" value="<%= debt[0][0].name %>" readonly="true"/><br>
+
+                    <label for="reason">Motivo</label><br>
+                    <input type="text" name="reason" value="<%= debt[0][0].reason %>"><br>
+
+                    <label for="value">valor</label><br>
+                    <input type="number" step="0.01" name="value" value="<%= debt[0][0].value.valueOf() %>"><br>
+
+                    <label for="date">Data</label><br>
+                    <input type="text" name="date" value="<%= debt[0][0].date %>"><br>
+
+                    <input type="submit" name="action" value="Salvar" />
+                </form>
+
+            </div><!-- end main-content -->
+           
+
+        </main>
+
+    </div><!-- end container -->
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/home.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/main.js"></script>
+    <title>Code7 - Home</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <%- include('./partials/header.html'); -%>
+
+        <main>
+
+            <div class="side-content">
+                <h3>Usuários</h3>
+
+                <% for(let i=0; i <  usersListDatabase.length; i++) { %>
+
+                    <div class="user">
+                        <span><%= usersListDatabase[i].name %></span>
+                        <div class="json-placeholder-id">JsonPlaceholder id: <%= usersListDatabase[i].id %></div>
+                        <a class="button view-debt-list" href="/list-user-debt/<%= usersListDatabase[i].id %>">Listar Dívidas</a>
+                    </div>
+
+                <% } %>
+                
+
+            </div><!-- end side-content -->
+
+            <div class="main-content">
+                <h3>Inserir nova dívida</h3>
+                <form method="post" autocomplete="off">
+                    <input class="json-placeholder-id" type="value" name="jsonplaceholderid" />
+        
+                    <label for="client">Cliente</label><br>
+                    <input class="main-search-field" type="text" name="client" /><br>
+                    <ul class="all-users">
+
+                        <% for(let i=0; i < usersList.length; i++) { %>
+
+                            <li>
+                                <%= usersList[i].name; %> 
+                                <div class="placeholder-id <%= (usersList[i].name).toLowerCase() %>"><%= usersList[i].json_placeholder_id; %></div>
+                            </li>
+
+                        <% } %>
+                        
+                    </ul><!-- end all-users -->
+
+                    <label for="reason">Motivo</label><br>
+                    <input type="text" name="reason"><br>
+
+                    <label for="value">valor</label><br>
+                    <input type="number" step="0.01" name="value"><br>
+
+                    <label for="date">Data</label><br>
+                    <input type="date" name="date"><br>
+
+                    <input type="submit" name="action" value="Inserir dívida" />
+                </form>
+
+            </div><!-- end main-content -->
+            <div class="clear"></div>
+
+        </main>
+
+    </div><!-- end container -->
+
+</body>
+
+</html>
