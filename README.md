@@ -1,4 +1,4 @@
-# App para gerência de dividas
+# App para gerência de dívidas
 #### App para gerência de dívidas, com acesso a uma API Rest. 
 
 - Linguagem: JavaScript
@@ -24,4 +24,5 @@ A aplicação poderá ser acessada em: http://localhost:5000/
 ### Backlog:
 
 [] Tratamento de mensagens;
+
 [] Formatar valores em real brasileiro;
